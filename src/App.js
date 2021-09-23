@@ -8,7 +8,6 @@ import { Switch, Route, useLocation } from 'react-router-dom'
 
 const App = () => {
 	function Content() {
-		
 		const location = useLocation()
 		const [displayLocation, setDisplayLocation] = useState(location)
 		const [transitionStage, setTransistionStage] = useState('fadeIn')
@@ -17,7 +16,7 @@ const App = () => {
 
 		useEffect(() => {
 			if (location !== displayLocation) setTransistionStage('fadeOut')
-		}, [location, displayLocation])
+		}, [location])
 
 		return (
 			<div
@@ -25,15 +24,23 @@ const App = () => {
 				onAnimationEnd={() => {
 					if (transitionStage === 'fadeOut') {
 						setTransistionStage('fadeIn')
-						setDisplayLocation(location)
+						setDisplayLocation(() => location)
 					}
 				}}
 			>
 				<Switch location={displayLocation}>
-					<Route exact path='/' component={About} />
-					<Route path='/projects' component={Projects} />
-					<Route path='/skills' component={Skills} />
-					<Route path='/contact' component={Contact} />
+					<Route exact path='/'>
+						<About />
+					</Route>
+					<Route path='/projects'>
+						<Projects />
+					</Route>
+					<Route path='/skills'>
+						<Skills />
+					</Route>
+					<Route path='/contact'>
+						<Contact />
+					</Route>
 				</Switch>
 			</div>
 		)
