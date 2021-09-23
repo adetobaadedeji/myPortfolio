@@ -17,7 +17,7 @@ const App = () => {
 
 		useEffect(() => {
 			if (location !== displayLocation) setTransistionStage('fadeOut')
-		}, [location])
+		}, [location, displayLocation])
 
 		return (
 			<div
