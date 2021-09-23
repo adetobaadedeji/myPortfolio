@@ -12,7 +12,7 @@ const Navbar = () => {
 
 	return (
 		<div className='relative z-20'>
-			<header className='bg-gray-800 block fixed inset-x-0 bottom-0 sm:sticky md:top-0 z-20 shadow-box md:shadow-none md:border-0 rounded-t-xl md:rounded-none'>
+			<header className='bg-gray-800 block fixed inset-x-0 bottom-0 md:sticky md:top-0 z-20 shadow-box md:shadow-none md:border-0 rounded-t-xl md:rounded-none'>
 				<div className='container mx-auto flex flex-wrap justify-between p-2 sm:p-3 md:p-4 flex-row items-center'>
 					<div className='title-font font-medium text-white'>
 						<span className='ml-3 font-medium text-sm md:text-xl'>
