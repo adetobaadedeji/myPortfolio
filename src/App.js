@@ -17,6 +17,7 @@ export function Content() {
 
 	return (
 		<div
+			key={location.key}
 			className={`animate-${transitionStage}`}
 			onAnimationEnd={() => {
 				if (transitionStage === 'fadeOut') {
