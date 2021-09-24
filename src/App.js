@@ -12,8 +12,6 @@ const App = () => {
 		const [displayLocation, setDisplayLocation] = useState(location)
 		const [transitionStage, setTransistionStage] = useState('fadeIn')
 
-		console.log(location)
-
 		useEffect(() => {
 			if (location !== displayLocation) setTransistionStage('fadeOut')
 		}, [location])
@@ -24,23 +22,15 @@ const App = () => {
 				onAnimationEnd={() => {
 					if (transitionStage === 'fadeOut') {
 						setTransistionStage('fadeIn')
-						setDisplayLocation(() => location)
+						setDisplayLocation(location)
 					}
 				}}
 			>
 				<Switch location={displayLocation}>
-					<Route exact path='/'>
-						<About />
-					</Route>
-					<Route path='/projects'>
-						<Projects />
-					</Route>
-					<Route path='/skills'>
-						<Skills />
-					</Route>
-					<Route path='/contact'>
-						<Contact />
-					</Route>
+					<Route exact path='/' component={About} />
+					<Route path='/projects' component={Projects} />
+					<Route path='/skills' component={Skills} />
+					<Route path='/contact' component={Contact} />
 				</Switch>
 			</div>
 		)
