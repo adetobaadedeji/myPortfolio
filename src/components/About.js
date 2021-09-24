@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom'
 
 const About = () => {
   return (
-		// <section id='about' className='h-full md:-mt-16 md:pt-10 bg-gray-900'>
-		<section id='about' className='h-(screen-20) sm:h-(screen-16) bg-gray-900 mt-8 md:mt-0'>
+		<section id='about' className='h-(screen-20) sm:h-(screen-16) bg-gray-900 mt-8 md:mt-0 animate-fadeIn'>
 			<div className='container mx-auto flex px-5 py-5 md:px-12 md:py-16 md:max-h-full lg:flex-row flex-col justify-between items-center'>
 				<div className='lg:w-1/2 lg:pr-4 flex flex-col md:items-start md:text-left mb-8 md:mb-0 items-center text-center'>
 					<h1 className='title-font text-xl sm:text-2xl mb-2 font-medium text-white'>

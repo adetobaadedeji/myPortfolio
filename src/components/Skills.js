@@ -6,7 +6,7 @@ const Skills = () => {
 	return (
 		<section
 			id='skills'
-			className='h-full sm:h-(screen-16) bg-gray-900 mt-8 md:mt-0 mb-8 md:mb-0'
+			className='h-full sm:h-(screen-16) bg-gray-900 mt-8 md:mt-0 mb-8 md:mb-0 animate-fadeIn'
 		>
 			<div className='container px-5 py-10 mx-auto'>
 				<div className='text-center mb-10'>
