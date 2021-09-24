@@ -26,7 +26,7 @@ export function Content() {
 				}
 			}}
 		>
-			<Switch location={displayLocation}>
+			<Switch location={displayLocation} key={location.key}>
 				<Route exact path='/' component={About} />
 				<Route path='/projects' component={Projects} />
 				<Route path='/skills' component={Skills} />
