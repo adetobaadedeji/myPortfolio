@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
-import { ArrowRightIcon } from '@heroicons/react/solid'
+import { DownloadIcon } from '@heroicons/react/solid'
 import { ViewGridAddIcon } from '@heroicons/react/solid'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import Modal from './Modal'
 
 const Navbar = () => {
-
 	const [modal, setModal] = useState(false)
-	
-	const toggleModal = () => setModal(!modal)	
+
+	const toggleModal = () => setModal(!modal)
 
 	return (
 		<div className='relative z-20'>
@@ -20,28 +19,62 @@ const Navbar = () => {
 						</span>
 					</div>
 					<nav className='hidden md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	md:flex flex-wrap items-center text-base justify-center'>
-						<Link to='/' className='mr-5 hover:text-white'>
+						<NavLink
+							to='/'
+							exact
+							activeClassName='text-white'
+							className='mr-5 hover:text-white'
+						>
 							About
-						</Link>
-						<Link to='/projects' className='mr-5 hover:text-white'>
+						</NavLink>
+						<NavLink
+							to='/projects'
+							activeClassName='text-white'
+							className='mr-5 hover:text-white'
+						>
 							Past Works
-						</Link>
-						<Link to='/skills' className='mr-5 hover:text-white'>
+						</NavLink>
+						<NavLink
+							to='/skills'
+							activeClassName='text-white'
+							className='mr-5 hover:text-white'
+						>
 							Skills
-						</Link>
+						</NavLink>
+						<NavLink
+							to='/contact'
+							activeClassName='text-white'
+							className='mr-5 hover:text-white'
+						>
+							Contact
+						</NavLink>
 					</nav>
-					<Link
-						to='/contact'
-						className='hidden md:inline-flex items-center py-1 px-3 mt-1 sm:mt-0 rounded bg-green-500 border-0 focus:outline-none hover:bg-green-600 text-white text-base'
+					<a
+						download
+						href='/adetoba-resume.pdf'
+						className='hidden md:inline-flex items-center py-1 px-3 mt-1 sm:mt-0 rounded bg-green-500 border-0 focus:outline-none hover:bg-green-600 text-white text-base animate-pulse'
 					>
-						Hire Me
-						<ArrowRightIcon className='w-4 h-4 ml-1' />
-					</Link>
+						Resume
+						<DownloadIcon className='w-4 h-4 ml-1' />
+					</a>
+
 					<div onClick={toggleModal} className=' md:hidden text-green-600'>
 						<ViewGridAddIcon className='w-8 h-8 ml-1' />
 					</div>
 				</div>
 			</header>
+
+			<div className='flex fixed top-0 inset-x-0 mt-5 md:hidden z-50 animate-bounce'>
+				<a
+					download
+					href='/adetoba-resume.pdf'
+					className='flex flex-row items-center ml-auto mr-5 py-1 px-3 rounded bg-green-500 border-0 focus:outline-none hover:bg-green-600 text-white text-sm'
+				>
+					<span>Resume</span>
+					<DownloadIcon className='w-4 h-4 ml-1' />
+				</a>
+			</div>
+
 			<div
 				className={` ${
 					modal ? 'block animate-modalIn' : 'hidden animate-modalOut'

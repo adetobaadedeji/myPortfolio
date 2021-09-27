@@ -10,7 +10,7 @@ const About = () => {
 						Hi, there!
 						<br className='inline-block' /> You want to build amazing apps ?
 					</h1>
-					<h2 className='text-xl sm:text-2xl  mb-2 font-medium text-green-400 animate-bounce'>
+					<h2 className='text-xl sm:text-2xl  mb-2 font-medium text-green-400'>
 						You've come to the right place.
 					</h2>
 					<p className='mb-8 text-sm sm:text-base lg:text-lg text-justify leading-relaxed'>
