@@ -15,6 +15,22 @@ export const projects = [
 		image: './my-reads.png',
 		link: 'https://adetobaadedeji.github.io/myReads/#/',
 	},
+	{
+		title: 'SendFreight',
+		subtitle: 'React Project',
+		description:
+			'This is a UI design implementation test I did for sendfreight frontend Internship position. I built this with React and Tailwind',
+		image: './sendfreight.png',
+		link: 'https://adetoba-sendfreight.netlify.app/',
+	},
+	{
+		title: 'Tips Calculator',
+		subtitle: 'React Project',
+		description:
+			'This is a tips calculator project challenge I took up from frontendmentor to sharpen my React skill. I built this with React and Tailwind',
+		image: './tips-calculator.png',
+		link: 'https://adetoba-tips-calculator.netlify.app/',
+	},
 ]
 
 export const skills = [
