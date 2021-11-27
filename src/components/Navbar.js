@@ -66,7 +66,6 @@ const Navbar = () => {
 
 			<div className='flex fixed top-0 inset-x-0 mt-5 md:hidden z-50 animate-bounce'>
 				<a
-					download
 					href='/adetoba-resume.pdf'
 					className='flex flex-row items-center ml-auto mr-5 py-1 px-3 rounded bg-green-500 border-0 focus:outline-none hover:bg-green-600 text-white text-sm'
 				>
