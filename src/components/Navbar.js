@@ -51,7 +51,7 @@ const Navbar = () => {
 					</nav>
 					<a
 						download
-						href='/adetoba-resume.pdf'
+						href='/Resume-ADETOBA-ADEDEJI.pdf'
 						className='hidden md:inline-flex items-center py-1 px-3 mt-1 sm:mt-0 rounded bg-green-500 border-0 focus:outline-none hover:bg-green-600 text-white text-base animate-pulse'
 					>
 						Resume
@@ -66,7 +66,7 @@ const Navbar = () => {
 
 			<div className='flex fixed top-0 inset-x-0 mt-5 md:hidden z-50 animate-bounce'>
 				<a
-					href='/adetoba-resume.pdf'
+					href='/Resume-ADETOBA-ADEDEJI.pdf'
 					className='flex flex-row items-center ml-auto mr-5 py-1 px-3 rounded bg-green-500 border-0 focus:outline-none hover:bg-green-600 text-white text-sm'
 				>
 					<span>Resume</span>
