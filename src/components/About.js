@@ -16,16 +16,16 @@ const About = () => {
 					<h2 className='text-xl sm:text-2xl  mb-2 font-medium text-green-400'>
 						You've come to the right place.
 					</h2>
-					<p className='mb-8 text-sm sm:text-base xl:text-lg text-justify  leading-relaxed '>
-						I'm <span className='text-white'> Adetoba Adedeji</span>, a
-						creative and result-oriented developer with experience in web
-						applications. My primary focus is on the frontend in other to build
-						Apps that create greats experience for users. Responsive web design
-						in software development is my favorite and as a result, I create
+					<p className='mb-8 text-sm sm:text-base xl:text-lg text-justify  leading-relaxed tracking-wide'>
+						I'm <span className='text-white'> Adetoba Adedeji</span>, a creative
+						and result-oriented developer with experience in web applications.
+						My primary focus is on the frontend in other to build Apps that
+						create greats experience for users. Responsive web design in
+						software development is my favorite and as a result, I create
 						responsive and interactive websites. My design approach follows the
 						mobile-first principle so as to give access and create better
 						experiences for all users irrespective of their devices. I love
-						technology and I love to contribute to the tech world. 
+						technology and I love to contribute to the tech world.
 					</p>
 					<div className='flex justify-center'>
 						<Link
