@@ -52,7 +52,7 @@ const Navbar = () => {
 							Contact
 						</NavLink>
 					</nav>
-					<div className='flex space-x-5 mr-4'>
+					<div className='hidden md:flex space-x-5 mr-4'>
 						<a
 							href='https://www.linkedin.com/in/adetoba-adedeji/'
 							target='_blank'
