@@ -39,7 +39,7 @@ export const projects = [
 		title: 'Tip Calculator',
 		subtitle: 'React Project',
 		description:
-			'I took up this project from frontendmentor.io. The Tip Calculator calculates tip amount for various percentages of the cost of service, and also provides a total amount that includes the tip. It also includes the ability to split the cost between any number of people.',
+			'This is a project from frontendmentor.io. The Tip Calculator calculates tip amount for various percentages of the cost of service, and also provides a total amount that includes the tip. It also includes the ability to split the cost between any number of people.',
 		image: './tips.png',
 		link: {
 			live: 'https://adetoba-tips-calculator.netlify.app/',
