@@ -8,7 +8,7 @@ const Projects = () => {
 			id='projects'
 			className='md:h-(screen-16) text-gray-400 bg-gray-900 body-font p-4 md:p-0 mb-10 md:mb-0 animate-fadeIn'
 		>
-			<div className='container flex flex-col items-center px-5 py-10 mx-auto text-center'>
+			<div className='container flex flex-col items-center px-3 py-10 mx-auto text-center'>
 				<div className='flex flex-col w-full mb-8'>
 					<CodeIcon className='mx-auto inline-block w-10 mb-4' />
 					<h1 className='sm:text-4xl text-3xl font-medium title-font mb-4 text-white'>
@@ -48,7 +48,7 @@ const Projects = () => {
 										{project.techs.map((tech) => (
 											<div key={tech} className='pb-2 w-1/2'>
 												<div className='flex items-center'>
-													<BadgeCheckIcon className='text-green-400 w-6 h-6 flex-shrink-0 mr-4' />
+													<BadgeCheckIcon className='text-green-400 w-6 h-6 flex-shrink-0 mr-2' />
 													<span className='title-font text-sm sm:text-base lg:text-lg font-medium'>
 														{tech}
 													</span>

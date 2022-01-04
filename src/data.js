@@ -3,7 +3,7 @@ export const projects = [
 		title: 'WindBnb',
 		subtitle: 'React Project',
 		description:
-			'This is a frontend Project challange from devchallenges.io. This project requires to list available apartments and be able to filter apartment(s) based on Location and number of guests.',
+			'This is a frontend Project challange from devchallenges.io. This project requires to list available apartments and be able to filter apartment(s) based on location and number of guests.',
 		image: './wind.png',
 		link: {
 			live: 'https://adetobaadedeji.github.io/windbnb/',
