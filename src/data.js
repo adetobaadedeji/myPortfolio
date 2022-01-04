@@ -3,7 +3,7 @@ export const projects = [
 		title: 'WindBnb',
 		subtitle: 'React Project',
 		description:
-			'This is a frontend Project challange from devchallenges.io. This project requires to list available apartments and be able to filter apartment(s) based on location and number of guests.',
+			'This is a frontend project challange from devchallenges.io. This project requires to list available apartments and be able to filter apartment(s) based on location and number of guests.',
 		image: './wind.png',
 		link: {
 			live: 'https://adetobaadedeji.github.io/windbnb/',
@@ -15,7 +15,7 @@ export const projects = [
 		title: 'My Reads',
 		subtitle: 'React Project',
 		description:
-			'This project is a bookshelf (Cataloguing) app that allows users to select and categorize books they have read, are currently reading, or want to read. This project is one of the prerequisite projects for the completion of the Udacity React Nanodegree Program. ',
+			'This project is a bookshelf (Cataloguing) App that allows user to select and categorize books they have read, are currently reading, or want to read. This project is one of the prerequisite projects for the completion of the Udacity React Nanodegree Program. ',
 		image: './reads.png',
 		link: {
 			live: 'https://adetobaadedeji.github.io/myReads/#/',
@@ -36,10 +36,10 @@ export const projects = [
 		techs: ['React', 'Tailwind', 'Headless UI'],
 	},
 	{
-		title: 'Tips Calculator',
+		title: 'Tip Calculator',
 		subtitle: 'React Project',
 		description:
-			'This is a tip calculator project challenge I took up from frontendmentor.io to sharpen my React skill.',
+			'I took up this project from frontendmentor.io. The Tip Calculator calculates tip amount for various percentages of the cost of service, and also provides a total amount that includes the tip. It also includes the ability to split the cost between any number of people.',
 		image: './tips.png',
 		link: {
 			live: 'https://adetoba-tips-calculator.netlify.app/',

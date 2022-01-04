@@ -6,7 +6,7 @@ const Projects = () => {
 	return (
 		<section
 			id='projects'
-			className='md:h-(screen-16) text-gray-400 bg-gray-900 body-font p-4 md:p-0 mb-10 md:mb-0 animate-fadeIn'
+			className='md:h-(screen-16) text-gray-400 bg-gray-900 body-font p-4 md:p-0 animate-fadeIn'
 		>
 			<div className='container flex flex-col items-center px-3 py-10 mx-auto text-center'>
 				<div className='flex flex-col w-full mb-8'>
@@ -38,7 +38,7 @@ const Projects = () => {
 									<h1 className='title-font text-lg text-green-400 tracking-widest font-medium mb-3'>
 										{project.title}
 									</h1>
-									<p className='leading-relaxed text-left  text-sm sm:text-base lg:text-lg'>
+									<p className='leading-relaxed text-left  text-sm sm:text-base xl:text-lg tracking-wide'>
 										{project.description}
 									</p>
 									<h2 className='tracking-widest text-lg title-font font-medium text-green-400 my-4'>
@@ -49,7 +49,7 @@ const Projects = () => {
 											<div key={tech} className='pb-2 w-1/2'>
 												<div className='flex items-center'>
 													<BadgeCheckIcon className='text-green-400 w-6 h-6 flex-shrink-0 mr-2' />
-													<span className='title-font text-sm sm:text-base lg:text-lg font-medium'>
+													<span className='title-font text-sm sm:text-base xl:text-lg font-medium '>
 														{tech}
 													</span>
 												</div>
