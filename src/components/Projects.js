@@ -38,7 +38,7 @@ const Projects = () => {
 									<h1 className='title-font text-lg text-green-400 tracking-widest font-medium mb-3'>
 										{project.title}
 									</h1>
-									<p className='leading-relaxed text-left  text-sm sm:text-base xl:text-lg tracking-wide'>
+									<p className='leading-relaxed text-left  text-sm sm:text-base xl:text-lg '>
 										{project.description}
 									</p>
 									<h2 className='tracking-widest text-lg title-font font-medium text-green-400 my-4'>

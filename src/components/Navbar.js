@@ -67,13 +67,13 @@ const Navbar = () => {
 						>
 							<Email />
 						</a>
-						<a
+						{/* <a
 							href='https://www.linkedin.com/in/adetoba-adedeji/'
 							target='_blank'
 							rel='noopener noreferrer'
 						>
 							<Twitter />
-						</a>
+						</a> */}
 					</div>
 					<a
 						download
@@ -107,13 +107,13 @@ const Navbar = () => {
 					>
 						<Email />
 					</a>
-					<a
+					{/* <a
 						href='https://www.linkedin.com/in/adetoba-adedeji/'
 						target='_blank'
 						rel='noopener noreferrer'
 					>
 						<Twitter />
-					</a>
+					</a> */}
 				</div>
 				<a
 					href='/Resume-ADETOBA-ADEDEJI.pdf'
