@@ -74,6 +74,8 @@ const Contact = () => {
 							</h2>
 							<a
 								href='https://www.linkedin.com/in/adetoba-adedeji/'
+								target='_blank'
+								rel='noopener noreferrer'
 								className='title-font font-medium text-indigo-500 tracking-widest text-sm cursor-pointer'
 							>
 								LinkedIn
@@ -81,6 +83,8 @@ const Contact = () => {
 							</a>
 							<a
 								href='https://github.com/adetobaadedeji/'
+								target='_blank'
+								rel='noopener noreferrer'
 								className='title-font font-medium text-indigo-500 tracking-widest text-sm mt-4 cursor-pointer'
 							>
 								GitHub

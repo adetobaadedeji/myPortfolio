@@ -1,35 +1,51 @@
 export const projects = [
 	{
-		title: 'My Reads',
-		subtitle: 'React Project',
-		description:
-			'This project is a bookshelf (Cataloguing/Tracking) app that allows users to select and categorize books they have read, are currently reading, or want to read. This project is one of the prerequisite projects for the completion of the Udacity React Nanodegree Program. ',
-		image: './my-reads.png',
-		link: 'https://adetobaadedeji.github.io/myReads/#/',
-	},
-		{
 		title: 'WindBnb',
 		subtitle: 'React Project',
 		description:
-			'This is a frontend Project challange from devchallenge.io. I built this project with React. The state of the APP is managed with React Hooks and Context API. This project requires to list available apartments and be able to filter apartment(s) based on Location and number of guests.',
-		image: './windbnb.png',
-		link: 'https://adetobaadedeji.github.io/windbnb/',
+			'This is a frontend Project challange from devchallenges.io. This project requires to list available apartments and be able to filter apartment(s) based on Location and number of guests.',
+		image: './wind.png',
+		link: {
+			live: 'https://adetobaadedeji.github.io/windbnb/',
+			code: 'https://github.com/adetobaadedeji/windbnb',
+		},
+		techs: ['React', 'SCSS', 'React Hooks', 'Context API'],
+	},
+	{
+		title: 'My Reads',
+		subtitle: 'React Project',
+		description:
+			'This project is a bookshelf (Cataloguing) app that allows users to select and categorize books they have read, are currently reading, or want to read. This project is one of the prerequisite projects for the completion of the Udacity React Nanodegree Program. ',
+		image: './reads.png',
+		link: {
+			live: 'https://adetobaadedeji.github.io/myReads/#/',
+			code: 'https://github.com/adetobaadedeji/myReads',
+		},
+		techs: ['React', 'React-Router'],
 	},
 	{
 		title: 'SendFreight',
 		subtitle: 'React Project',
 		description:
-			'This is a UI design implementation test I did for sendfreight frontend Internship position. I built this with React and Tailwind',
-		image: './sendfreight.png',
-		link: 'https://adetoba-sendfreight.netlify.app/',
+			'This is a UI design implementation test I did for sendfreight frontend Internship position',
+		image: './freight.png',
+		link: {
+			live: 'https://adetoba-sendfreight.netlify.app/',
+			code: 'https://github.com/adetobaadedeji/sendFreight',
+		},
+		techs: ['React', 'Tailwind', 'Headless UI'],
 	},
 	{
 		title: 'Tips Calculator',
 		subtitle: 'React Project',
 		description:
-			'This is a tips calculator project challenge I took up from frontendmentor to sharpen my React skill. I built this with React and Tailwind',
-		image: './tips-calculator.png',
-		link: 'https://adetoba-tips-calculator.netlify.app/',
+			'This is a tip calculator project challenge I took up from frontendmentor.io to sharpen my React skill.',
+		image: './tips.png',
+		link: {
+			live: 'https://adetoba-tips-calculator.netlify.app/',
+			code: 'https://github.com/adetobaadedeji/tips-calculator',
+		},
+		techs: ['React', 'React Hooks', 'Tailwind'],
 	},
 ]
 

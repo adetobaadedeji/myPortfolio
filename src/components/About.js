@@ -13,7 +13,7 @@ const About = () => {
 					<h2 className='text-xl sm:text-2xl  mb-2 font-medium text-green-400'>
 						You've come to the right place.
 					</h2>
-					<p className='mb-8 text-sm sm:text-base lg:text-lg text-justify leading-relaxed'>
+					<p className='mb-8 text-sm sm:text-base xl:text-lg  leading-relaxed'>
 						I'm <span className="text-white"> Adetoba Adedeji</span>, a highly
 						organized and detail-oriented Engineering graduate. I love
 						technology and I love to contribute to the tech world. I specialize
@@ -26,16 +26,16 @@ const About = () => {
 						<Link
 							to='/contact'
 							href='#contact'
-							className='inline-flex text-white bg-green-500 border-0 py-1 px-3 sm:py-2 sm:px-6 focus:outline-none hover:bg-green-600 rounded text-base sm:text-lg'
+							className='inline-flex text-white bg-green-500 border-0 py-3 px-3 sm:px-6 focus:outline-none hover:bg-green-600 rounded text-base sm:text-lg'
 						>
 							Work With Me
 						</Link>
 						<Link
 							to='/projects'
 							href='#projects'
-							className='ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-1 px-3 sm:py-2 sm:px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-base sm:text-lg'
+							className='ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-3 px-3  sm:px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-base sm:text-lg'
 						>
-							See My Past Work
+							See My Past Works
 						</Link>
 					</div>
 				</div>
