@@ -19,14 +19,14 @@ const Projects = () => {
 					{projects.map((project, index) => (
 						<div
 							key={index}
-							className='sm:w-9/12 xl:w-7/12 mx-auto mb-10 lg:mb-20 '
+							className='sm:w-9/12 lg:w-11/12 xl:w-8/12 mx-auto mb-10 lg:mb-20 '
 						>
 							<div
 								className={`flex flex-col lg:flex-row ${
 									index % 2 === 0 && 'lg:flex-row-reverse'
 								} relative `}
 							>
-								<div className='w-full p-4'>
+								<div className='w-full p-4 lg:mx-2'>
 									<img
 										alt='gallery'
 										className=' w-full h-full object-contain object-center'
@@ -34,7 +34,7 @@ const Projects = () => {
 									/>
 								</div>
 
-								<div className='flex flex-col w-full px-2 md:px-4 pt-4 pb-5 border-4 border-gray-800 bg-gray-900 '>
+								<div className='flex flex-col w-full px-2 md:px-4 pt-4 pb-5 border-4 border-gray-800 bg-gray-900 lg:mx-2'>
 									<h1 className='title-font text-lg text-green-400 tracking-widest font-medium mb-3'>
 										{project.title}
 									</h1>
@@ -47,9 +47,9 @@ const Projects = () => {
 									<div className='flex flex-wrap mb-8'>
 										{project.techs.map((tech) => (
 											<div key={tech} className='pb-2 w-1/2'>
-												<div className='flex items-center'>
-													<BadgeCheckIcon className='text-green-400 w-6 h-6 flex-shrink-0 mr-2' />
-													<span className='title-font text-sm sm:text-base  font-medium '>
+												<div className='flex items-start'>
+													<BadgeCheckIcon className=' text-green-400 w-6 h-6 flex-shrink-0 mr-2' />
+													<span className='title-font text-sm sm:text-base text-left font-medium '>
 														{tech}
 													</span>
 												</div>

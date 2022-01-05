@@ -1,9 +1,43 @@
 export const projects = [
 	{
+		title: 'Audiophile',
+		subtitle: 'React Project',
+		description:
+			"This is a multipage e-commerce project challenge from devchallenges.io. It's interactive and responsive on all devices. Some of it's features include: Add, Edit, and Remove products from cart. Total amount of Cart Items is calculated, together with shipping fee and VAT. Form fields are validated in checkout. Order confirmation after checkout, with order summary. Cart is also persisted after refreshing browser.",
+		image: './audiophile.png',
+		link: {
+			live: 'https://audiophile-gadgets.vercel.app/',
+			code: 'https://github.com/adetobaadedeji/audiophile',
+		},
+		techs: [
+			'React',
+			'React Hooks',
+			'Firebase',
+			'Redux Toolkit',
+			'Yup',
+			'React Router',
+			'React Hook Form',
+			'Styled-Component',
+			'Redux-Persist',
+		],
+	},
+	{
+		title: 'Would You Rather',
+		subtitle: 'React Project',
+		description:
+			'Would You Rather is a polling game that presents the user with a series of questions that can be answered one of two ways. The user can post questions and also vote on questions posted by other users. There is also a leaderboard to show users with the highest scores. This project is the second prerequisite project for the completion of the Udacity React Nanodegree Program. This project is to solidify the understanding of students on Redux as a state management tool. Other features include Login and Logout functionalities, Protected route to deny unauthorized user.',
+		image: './would-you.png',
+		link: {
+			live: 'https://would-you-rather-this-or-that.vercel.app/',
+			code: 'https://github.com/adetobaadedeji/would-you-rather',
+		},
+		techs: ['React', 'React-Router', 'Redux', 'Redux-Thunk', 'Tailwind'],
+	},
+	{
 		title: 'WindBnb',
 		subtitle: 'React Project',
 		description:
-			'This is a frontend project challenge from devchallenges.io. This project requires to list available apartments and be able to filter apartment(s) based on location and number of guests.',
+			'This is a frontend project challenge from devchallenges.io. This project requires to list apartments from a given data and be able to filter available apartment(s) based on location and number of guests. This project helped sharpened my State Management skill in React using React Hooks and Context API.',
 		image: './wind.png',
 		link: {
 			live: 'https://adetobaadedeji.github.io/windbnb/',
@@ -11,11 +45,12 @@ export const projects = [
 		},
 		techs: ['React', 'SCSS', 'React Hooks', 'Context API'],
 	},
+
 	{
 		title: 'My Reads',
 		subtitle: 'React Project',
 		description:
-			'This project is a bookshelf (Cataloguing) App that allows user to select and categorize books they have read, are currently reading, or want to read. This project is one of the prerequisite projects for the completion of the Udacity React Nanodegree Program. ',
+			'This project is a bookshelf (Cataloguing) App that allows user to select and categorize books they have read, are currently reading, or want to read. Key feature is, information is persisted between page refreshes; when the browser is refreshed, the same information is displayed on the page in other to keep track of books a user have read, currently reading and want to read. This project is one of the prerequisite projects for the completion of the Udacity React Nanodegree Program. This project was to test my understanding of State Management in React',
 		image: './reads.png',
 		link: {
 			live: 'https://adetobaadedeji.github.io/myReads/#/',
@@ -52,9 +87,11 @@ export const projects = [
 export const skills = [
 	'JavaScript',
 	'React',
-	'Redux',
+	'Redux (Redux ToolKit)',
 	'Next.js',
+	'TypeScript',
 	'Firebase',
+	'SCSS (Sass)',
 	'Styled Components',
 	'Tailwind',
 	'Material UI',

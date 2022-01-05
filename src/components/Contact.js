@@ -4,17 +4,21 @@ import emailjs from '@emailjs/browser'
 const Contact = () => {
 	const formRef = useRef()
 	const [done, setDone] = useState(false)
+	const [formValues, setFormValues] = useState({
+		name: '',
+		subject: '',
+		email: '',
+		message: '',
+	})
+
+	const onChangeFormValues = (e) =>
+		setFormValues({ ...formValues, [e.target.name]: e.target.value })
 
 	useEffect(() => {
 		setTimeout(function () {
 			setDone(false)
-		}, 3000)
+		}, 5000)
 	}, [])
-
-	const [name, setName] = useState('')
-	const [email, setEmail] = useState('')
-	const [subject, setSubject] = useState('')
-	const [message, setMessage] = useState('')
 
 	const sendEmail = (e) => {
 		e.preventDefault()
@@ -30,10 +34,7 @@ const Contact = () => {
 				(result) => {
 					console.log(result.text)
 					setDone(true)
-					setName('')
-					setEmail('')
-					setSubject('')
-					setMessage('')
+					setFormValues({ name: '', subject: '', email: '', message: '' })
 				},
 				(error) => {
 					console.log(error.text)
@@ -153,9 +154,9 @@ const Contact = () => {
 							type='text'
 							id='name'
 							name='name'
-							value={name}
+							value={formValues.name}
 							className='w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
-							onChange={(e) => setName(e.target.value)}
+							onChange={onChangeFormValues}
 						/>
 					</div>
 					<div className='relative mb-4'>
@@ -169,10 +170,10 @@ const Contact = () => {
 							required
 							type='text'
 							id='subject'
-							value={subject}
+							value={formValues.subject}
 							name='subject'
 							className='w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
-							onChange={(e) => setSubject(e.target.value)}
+							onChange={onChangeFormValues}
 						/>
 					</div>
 					<div className='relative mb-4'>
@@ -184,9 +185,9 @@ const Contact = () => {
 							type='email'
 							id='email'
 							name='email'
-							value={email}
+							value={formValues.email}
 							className='w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
-							onChange={(e) => setEmail(e.target.value)}
+							onChange={onChangeFormValues}
 						/>
 					</div>
 					<div className='relative mb-4'>
@@ -199,10 +200,10 @@ const Contact = () => {
 						<textarea
 							required
 							id='message'
-							value={message}
+							value={formValues.message}
 							name='message'
 							className='w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out'
-							onChange={(e) => setMessage(e.target.value)}
+							onChange={onChangeFormValues}
 						/>
 					</div>
 					<button
@@ -211,7 +212,7 @@ const Contact = () => {
 					>
 						Submit
 					</button>
-					{done && (
+					{done ? (
 						<p
 							className={`${
 								done ? 'flex' : 'hidden'
@@ -220,6 +221,8 @@ const Contact = () => {
 							{' '}
 							Thank you...{' '}
 						</p>
+					) : (
+						<p></p>
 					)}
 				</form>
 			</div>
