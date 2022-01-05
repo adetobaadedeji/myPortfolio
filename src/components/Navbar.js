@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 import Modal from './Modal'
 import LinkedIn from '../logos/LinkedIn'
 import Email from '../logos/Email'
-import Twitter from '../logos/Twitter'
+// import Twitter from '../logos/Twitter'
 
 const Navbar = () => {
 	const [modal, setModal] = useState(false)

@@ -27,7 +27,7 @@ export const projects = [
 		title: 'SendFreight',
 		subtitle: 'React Project',
 		description:
-			'This is a UI design implementation test I did for sendfreight frontend Internship position',
+			'This is a UI design implementation project I took as a test for sendfreight frontend Internship position. This is responsive on all devices and was built with first-mobile approach.',
 		image: './freight.png',
 		link: {
 			live: 'https://adetoba-sendfreight.netlify.app/',
@@ -40,7 +40,7 @@ export const projects = [
 		subtitle: 'React Project',
 		description:
 			'This is a project from frontendmentor.io. The Tip Calculator calculates tip amount for various percentages of the cost of service, and also provides a total amount that includes the tip. It also includes the ability to split the cost between any number of people.',
-		image: './tips.png',
+		image: './tip.png',
 		link: {
 			live: 'https://adetoba-tips-calculator.netlify.app/',
 			code: 'https://github.com/adetobaadedeji/tips-calculator',

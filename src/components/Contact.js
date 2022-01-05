@@ -1,35 +1,72 @@
-import React, { useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
+import emailjs from '@emailjs/browser'
+
 const Contact = () => {
+	const formRef = useRef()
+	const [done, setDone] = useState(false)
+
+	useEffect(() => {
+		setTimeout(function () {
+			setDone(false)
+		}, 3000)
+	}, [])
+
 	const [name, setName] = useState('')
 	const [email, setEmail] = useState('')
+	const [subject, setSubject] = useState('')
 	const [message, setMessage] = useState('')
 
-	function encode(data) {
-		return Object.keys(data)
-			.map(
-				(key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
-			)
-			.join('&')
-	}
-
-	function reset(){
-		setName('')
-		setEmail('')
-		setMessage('')
-	}
-
-	function handleSubmit(e) {
+	const sendEmail = (e) => {
 		e.preventDefault()
-		fetch('https://formsubmit.co/adedeji006@gmail.com', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-			body: encode({ 'form-name': 'contact', name, email, message }),
-		})
-			.then(() => alert('Message sent!'))
-			.catch((error) => alert(error))
-			
-			reset()
+
+		emailjs
+			.sendForm(
+				'service_opnz8zb',
+				'template_hsoqk7q',
+				formRef.current,
+				'user_VtrmjHkwBS6z6fCEIrm4K'
+			)
+			.then(
+				(result) => {
+					console.log(result.text)
+					setDone(true)
+					setName('')
+					setEmail('')
+					setSubject('')
+					setMessage('')
+				},
+				(error) => {
+					console.log(error.text)
+				}
+			)
 	}
+
+	// function encode(data) {
+	// 	return Object.keys(data)
+	// 		.map(
+	// 			(key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+	// 		)
+	// 		.join('&')
+	// }
+
+	// function reset(){
+	// 	setName('')
+	// 	setEmail('')
+	// 	setMessage('')
+	// }
+
+	// function handleSubmit(e) {
+	// 	e.preventDefault()
+	// 	fetch('https://formsubmit.co/adedeji006@gmail.com', {
+	// 		method: 'POST',
+	// 		headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+	// 		body: encode({ 'form-name': 'contact', name, email, message }),
+	// 	})
+	// 		.then(() => alert('Message sent!'))
+	// 		.catch((error) => alert(error))
+
+	// 		reset()
+	// }
 
 	return (
 		<section
@@ -96,8 +133,9 @@ const Contact = () => {
 				<form
 					netlify='true'
 					name='contact'
-					onSubmit={handleSubmit}
-					className='lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0'
+					ref={formRef}
+					onSubmit={sendEmail}
+					className='lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full  mt-8 md:mt-0'
 				>
 					<h2 className='text-white sm:text-4xl text-3xl mb-1 font-medium title-font'>
 						Hire Me
@@ -114,10 +152,27 @@ const Contact = () => {
 							required
 							type='text'
 							id='name'
-							value={name}
 							name='name'
+							value={name}
 							className='w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
 							onChange={(e) => setName(e.target.value)}
+						/>
+					</div>
+					<div className='relative mb-4'>
+						<label
+							htmlFor='subject'
+							className='leading-7 text-sm text-gray-400'
+						>
+							Subject
+						</label>
+						<input
+							required
+							type='text'
+							id='subject'
+							value={subject}
+							name='subject'
+							className='w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
+							onChange={(e) => setSubject(e.target.value)}
 						/>
 					</div>
 					<div className='relative mb-4'>
@@ -128,8 +183,8 @@ const Contact = () => {
 							required
 							type='email'
 							id='email'
-							value={email}
 							name='email'
+							value={email}
 							className='w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out'
 							onChange={(e) => setEmail(e.target.value)}
 						/>
@@ -156,6 +211,16 @@ const Contact = () => {
 					>
 						Submit
 					</button>
+					{done && (
+						<p
+							className={`${
+								done ? 'flex' : 'hidden'
+							} w-40 mt-5 bg-white font-medium text-green-600 p-3 text-base rounded animate-bounce`}
+						>
+							{' '}
+							Thank you...{' '}
+						</p>
+					)}
 				</form>
 			</div>
 		</section>

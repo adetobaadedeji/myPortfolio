@@ -34,29 +34,29 @@ const Projects = () => {
 									/>
 								</div>
 
-								<div className=' w-full px-2 md:px-4 pt-4 pb-5 border-4 border-gray-800 bg-gray-900 '>
+								<div className='flex flex-col w-full px-2 md:px-4 pt-4 pb-5 border-4 border-gray-800 bg-gray-900 '>
 									<h1 className='title-font text-lg text-green-400 tracking-widest font-medium mb-3'>
 										{project.title}
 									</h1>
-									<p className='leading-relaxed text-justify text-sm sm:text-base xl:text-lg tracking-wide'>
+									<p className='leading-relaxed text-justify text-sm sm:text-base  tracking-wide'>
 										{project.description}
 									</p>
 									<h2 className='tracking-widest text-lg title-font font-medium text-green-400 my-4'>
 										Technologies Used
 									</h2>
-									<div className='flex flex-wrap'>
+									<div className='flex flex-wrap mb-8'>
 										{project.techs.map((tech) => (
 											<div key={tech} className='pb-2 w-1/2'>
 												<div className='flex items-center'>
 													<BadgeCheckIcon className='text-green-400 w-6 h-6 flex-shrink-0 mr-2' />
-													<span className='title-font text-sm sm:text-base xl:text-lg font-medium '>
+													<span className='title-font text-sm sm:text-base  font-medium '>
 														{tech}
 													</span>
 												</div>
 											</div>
 										))}
 									</div>
-									<div className='flex justify-center mt-8'>
+									<div className='flex justify-center mt-auto'>
 										<a
 											href={project.link.live}
 											target='_blank'
