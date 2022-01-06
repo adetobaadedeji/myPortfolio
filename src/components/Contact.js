@@ -73,7 +73,7 @@ const Contact = () => {
 			}),
 		})
 			.then(() => {
-				alert('Message sent!')
+				// alert('Message sent!')
 				setDone(true)
 			})
 			.catch((error) => alert(error))
