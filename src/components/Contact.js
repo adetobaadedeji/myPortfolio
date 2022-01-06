@@ -61,7 +61,7 @@ const Contact = () => {
 
 	function handleSubmit(e) {
 		e.preventDefault()
-		fetch('https://formsubmit.co/adedeji006@gmail.com', {
+		fetch('https://formsubmit.co/6318030b6c84a89fb5c28907f146ef25', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 			body: encode({
