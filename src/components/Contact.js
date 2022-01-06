@@ -1,8 +1,10 @@
-import React, { useRef, useState, useEffect } from 'react'
-import emailjs from '@emailjs/browser'
+// import React, { useRef, useState, useEffect } from 'react'
+import React, { useState } from 'react'
+
+// import emailjs from '@emailjs/browser'
 
 const Contact = () => {
-	const formRef = useRef()
+	// const formRef = useRef()
 	const [done, setDone] = useState(false)
 	const [formValues, setFormValues] = useState({
 		name: '',
@@ -14,60 +16,70 @@ const Contact = () => {
 	const onChangeFormValues = (e) =>
 		setFormValues({ ...formValues, [e.target.name]: e.target.value })
 
-	useEffect(() => {
-		setTimeout(function () {
-			setDone(false)
-		}, 5000)
-	}, [])
+	// useEffect(() => {
+	// 	setTimeout(function () {
+	// 		setDone(false)
+	// 	}, 5000)
+	// }, [])
 
-	const sendEmail = (e) => {
-		e.preventDefault()
+	// const sendEmail = (e) => {
+	// 	e.preventDefault()
 
-		emailjs
-			.sendForm(
-				'service_opnz8zb',
-				'template_hsoqk7q',
-				formRef.current,
-				'user_VtrmjHkwBS6z6fCEIrm4K'
+	// 	emailjs
+	// 		.sendForm(
+	// 			'service_opnz8zb',
+	// 			'template_hsoqk7q',
+	// 			formRef.current,
+	// 			'user_VtrmjHkwBS6z6fCEIrm4K'
+	// 		)
+	// 		.then(
+	// 			(result) => {
+	// 				console.log(result.text)
+	// 				setDone(true)
+	// 				setFormValues({ name: '', subject: '', email: '', message: '' })
+	// 			},
+	// 			(error) => {
+	// 				console.log(error.text)
+	// 			}
+	// 		)
+	// }
+
+	function encode(data) {
+		return Object.keys(data)
+			.map(
+				(key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
 			)
-			.then(
-				(result) => {
-					console.log(result.text)
-					setDone(true)
-					setFormValues({ name: '', subject: '', email: '', message: '' })
-				},
-				(error) => {
-					console.log(error.text)
-				}
-			)
+			.join('&')
 	}
 
-	// function encode(data) {
-	// 	return Object.keys(data)
-	// 		.map(
-	// 			(key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
-	// 		)
-	// 		.join('&')
-	// }
+	function reset() {
+		setFormValues({ name: '', subject: '', email: '', message: '' })
+		// setName('')
+		// setEmail('')
+		// setMessage('')
+	}
 
-	// function reset(){
-	// 	setName('')
-	// 	setEmail('')
-	// 	setMessage('')
-	// }
+	function handleSubmit(e) {
+		e.preventDefault()
+		fetch('https://formsubmit.co/adedeji006@gmail.com', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			body: encode({
+				'form-name': 'contact',
+				name: formValues.name,
+				subject: formValues.subject,
+				email: formValues.email,
+				message: formValues.message,
+			}),
+		})
+			.then(() => {
+				alert('Message sent!')
+				setDone(true)
+			})
+			.catch((error) => alert(error))
 
-	// function handleSubmit(e) {
-	// 	e.preventDefault()
-	// 	fetch('https://formsubmit.co/adedeji006@gmail.com', {
-	// 		method: 'POST',
-	// 		headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-	// 		body: encode({ 'form-name': 'contact', name, email, message }),
-	// 	})
-	// 		.then(() => alert('Message sent!'))
-	// 		.catch((error) => alert(error))
-
-	// 		reset()
-	// }
+		reset()
+	}
 
 	return (
 		<section
@@ -134,8 +146,9 @@ const Contact = () => {
 				<form
 					netlify='true'
 					name='contact'
-					ref={formRef}
-					onSubmit={sendEmail}
+					// ref={formRef}
+					// onSubmit={sendEmail}
+					onSubmit={handleSubmit}
 					className='lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full  mt-8 md:mt-0'
 				>
 					<h2 className='text-white sm:text-4xl text-3xl mb-1 font-medium title-font'>

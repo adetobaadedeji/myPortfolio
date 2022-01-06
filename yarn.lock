@@ -39,11 +39,6 @@
     lodash "^4.17.15"
     webpack-merge "^4.2.2"
 
-"@emailjs/browser@^3.3.1":
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/@emailjs/browser/-/browser-3.3.1.tgz#573ed344933edf79790522f8f3ca31077f4e5926"
-  integrity sha512-hFoz5GHlaR7Wh/C6XaoZflX3UH3/Evev3y00S3jgLROMwKV+/Yu41muIpB5f755XGDnK7LT++KdMO6MOa2cAOQ==
-
 "@heroicons/react@^1.0.1":
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/@heroicons/react/-/react-1.0.5.tgz#2fe4df9d33eb6ce6d5178a0f862e97b61c01e27d"
@@ -236,11 +231,6 @@ ansi-html@0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/ansi-html/-/ansi-html-0.0.7.tgz#813584021962a9e9e6fd039f940d12f56ca7859e"
   integrity sha1-gTWEAhliqenm/QOflA0S9WynhZ4=
-
-ansi-regex@*:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-6.0.1.tgz#3183e38fae9a65d7cb5e53945cd5897d0260a06a"
-  integrity sha512-n5M855fKb2SsfMIiFFoVrABHJC8QtHwVx+mHWP3QcEqBHYienj5dHSgjbxtC0WEZXYt4wcD6zrQElDPhFuZgfA==
 
 ansi-regex@^2.0.0, ansi-regex@^2.1.1:
   version "2.1.1"
@@ -4562,7 +4552,7 @@ import-local@^1.0.0:
     pkg-dir "^2.0.0"
     resolve-cwd "^2.0.0"
 
-imurmurhash@*, imurmurhash@^0.1.4:
+imurmurhash@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/imurmurhash/-/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
   integrity sha1-khi5srkoojixPcT7a21XbyMUU+o=
