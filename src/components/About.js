@@ -20,12 +20,12 @@ const About = () => {
 						I'm <span className='text-white'> Adetoba Adedeji</span>, a creative
 						and result-oriented developer with experience in web applications.
 						My primary focus is on the frontend in other to build Apps that
-						create greats experience for users. Responsive web design in
+						create great experiences for users. Responsive web design in
 						software development is my favorite and as a result, I create
 						responsive and interactive websites. My design approach follows the
-						mobile-first principle so as to give access and create better
-						experiences for all users irrespective of their devices. I love
-						technology and I love to contribute to the tech world.
+						mobile-first principle and provides a great user experience for
+						multiple devices. I love technology and I love to contribute to
+						the tech world.
 					</p>
 					<div className='flex justify-center'>
 						<Link
@@ -44,7 +44,7 @@ const About = () => {
 						</Link>
 					</div>
 				</div>
-				<div className='lg:pl-4 md:mt-10 md:w-3/5 w-4/6 sm:w-5/6 lg:w-1/2 animate-pulse'>
+				<div className='lg:pl-4 md:mt-10 md:w-3/5 w-4/6 sm:w-5/6 lg:w-1/2'>
 					<img
 						className='object-cover object-center rounded'
 						alt='hero'
