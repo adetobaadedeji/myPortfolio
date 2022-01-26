@@ -3,7 +3,7 @@ export const projects = [
 		title: 'Audiophile',
 		subtitle: 'React Project',
 		description:
-			"This is a multipage e-commerce project challenge from frontendmentor.io. It's an interactive and responsive on multiple devices. Some of it's features include: Add, Edit, and Remove products from cart. Total amount of Cart Items are calculated, together with shipping fee and VAT. Form fields are validated in checkout. Order confirmation after checkout, with order an summary. Cart is also persisted after refreshing the browser.",
+			"This is a multipage e-commerce project challenge from frontendmentor.io. It's interactive and responsive on multiple devices. Some of it's features include: Add, Edit, and Remove products from cart. Total amount of Cart Items are calculated, together with shipping fee and VAT. Form fields are validated in checkout. Order confirmation after checkout, with order an summary. Cart is also persisted after refreshing the browser.",
 		image: './audiophile.png',
 		link: {
 			live: 'https://audiophile-gadgets.vercel.app/',
