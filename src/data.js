@@ -32,6 +32,25 @@ export const projects = [
 		],
 	},
 	{
+		title: 'Devjobs',
+		subtitle: 'React Project',
+		description:
+			'This is an advanced project from frontendmentor.io. The project is to build a jobs board with given local data. A user can filter jobs on the index page by title, location, and whether a job is for a full-time position. A user can click a job from the index page so that they can read more information and apply for the job. This project is responsive on multiple devices. ',
+		image: './devjobs.png',
+		link: {
+			live: 'https://devjobs-project.vercel.app/jobs',
+			code: 'https://github.com/adetobaadedeji/devjobs',
+		},
+		techs: [
+			'React',
+			'React-Router',
+			'TypeScript',
+			'Twin Macro',
+			'Tailwind',
+			'Styled-Components',
+		],
+	},
+	{
 		title: 'Would You Rather',
 		subtitle: 'React Project',
 		description:
